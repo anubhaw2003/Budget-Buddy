@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  color: #232528;
+}
+root {
+  --loginBg: #274c77;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.container .leftMain {
+  height: 100%;
+  width: 40vh;
+  background-color: azure;
+  box-shadow: 0 0 5px #311847;
+
+  transition: opacity 0.5s, display 0.5s;
+  overflow-y: scroll;
+}
+.hideleftMain {
+  display: none;
+  transition: all 0.3s ease;
+}
+.container .leftMain::-webkit-scrollbar {
+  display: none;
+}
+.container .leftMain .topSection {
+  height: auto;
+  width: 100%;
+  color: #eaf6ff;
+  color: #2a2a72;
+  padding: 20px 10px;
+}
+.container .leftMain .topSection .logo {
+  height: auto;
+  width: 100%;
+}
+.container .leftMain .topSection .logo .icon {
+  height: 80px;
+  width: 100%;
+}
+.container .leftMain .topSection .logo .icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.container .leftMain .topSection .logo #quickIntro {
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+.container .leftMain .topSection .accountSection {
+  height: auto;
+  width: 100%;
+  color: #eaf6ff;
+  margin-top: 30px;
+  /* background-color: #2a2a72; */
+}
+.container .leftMain .topSection .accountSection .myAccount {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #eaf6ff;
+  color: #2a2a72;
+}
+.container .leftMain .topSection .accountSection .myAccount .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px gray;
+}
+.container .leftMain .topSection .accountSection .myAccount .logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container .leftMain .topSection .accountSection .myAccount #name {
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+.container .leftMain .topSection .accountSection .myAccount span {
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.container .leftMain .topSection .accountSection .addAcc {
+  background-color: #2a2a72;
+  color: #eaf6ff;
+  width: 200px;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* position: relative; */
+  display: none;
+}
+.container .leftMain .topSection .accountSection .addAcc .addIcon {
+  /* padding: 5px; */
+  position: relative;
+  left: 30px;
+  top: 5px;
+}
+.container .leftMain .topSection .accountSection .connections {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  margin-top: 5px;
+}
+.container .leftMain .topSection .accountSection .connections .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px gray;
+}
+.container .leftMain .topSection .accountSection .connections .logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .leftMain .topSection .accountSection .connections #connect {
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+.container .leftMain .topSection .accountSection .connections span {
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.container .leftMain .topSection .accountSection .createcontact {
+  width: 200px;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* position: relative; */
+  display: none;
+}
+.container .leftMain .topSection .accountSection .createcontact .innerDiv {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2a2a72;
+  color: #eaf6ff;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5px 0; */
+  gap: 1rem;
+  margin-bottom: 5px;
+}
+.container .leftMain .topSection .accountSection .createcontact .contact {
+  border-bottom: 1px solid rgba(187, 184, 184, 0.329);
+}
+
+.container .leftMain .navList {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  /* margin-top: 2rem; */
+}
+.container .leftMain .navList ul {
+  height: auto;
+  width: 100%;
+  /* padding: 20px 0; */
+}
+.container .leftMain .navList ul li {
+  list-style: none;
+}
+.container .leftMain .navList ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  box-shadow: 0 0 2px 0px rgb(160, 156, 156);
+  border-radius: 5px;
+  transition: all 0.6s ease;
+}
+.container .leftMain .navList ul li a:hover {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #2a2a72;
+  color: #eaf6ff;
+}
+.container .leftMain .navList ul li a span {
+  padding: 4px;
+}
+.container .rightMain {
+  flex: 1;
+  height: 100%;
+}
+.container .rightMain .topSection {
+  min-height: 10vh;
+  width: 100%;
+  background-color: #2a2a72;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #eaf6ff;
+  padding: 0 20px;
+}
+.container .rightMain .topSection span {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.container .rightMain .navbar {
+  height: 100%;
+  width: auto;
+}
+.container .rightMain .navbar ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .rightMain .navbar ul li {
+  list-style: none;
+  padding: 5px 10px;
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.553);
+  box-shadow: 0 0 2px #eaf6ffc7;
+  border-radius: 5px;
+}
+.container .rightMain .navbar ul li:hover {
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.activeNav {
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container .rightMain .navbar ul li:nth-child(1):hover .expenseForm {
+  opacity: 1;
+  /* top: 600px; */
+}
+
+.container .rightMain .content {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.container .rightMain .content .summary {
+  min-height: 30vh;
+  width: 33vw;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+}
+.container .rightMain .content .summary h2 {
+  color: #2a2a72;
+}
+.container .rightMain .content .summary span {
+  color: #232528;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+.container .rightMain .content .summary .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.container .rightMain .content .summary .icons .iconCard {
+  padding: 10px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: #311847;
+}
+.container .rightMain .content .summary .icons .iconCard .img {
+  height: 60px;
+  width: 60px;
+}
+.container .rightMain .content .summary .icons .iconCard .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container .rightMain .content .summary .icons .iconCard h3 {
+  font-size: 1.1rem;
+  color: #eaf6ff;
+}
+.container .rightMain .content .summary .icons .iconCard h3 span {
+  font-size: 1.5rem;
+  color: #eaf6ff;
+  font-weight: 800;
+}
+.container .rightMain .content .instantHistory {
+  width: calc(100% - 33vw - 80px);
+  height: 100%;
+  padding: 10px 20px;
+}
+.container .rightMain .content .instantHistory .topSection {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .rightMain .content .instantHistory .topSection .searchBox {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .rightMain .content .instantHistory .topSection .searchBox input {
+  padding: 10px 20px;
+  width: 250px;
+  margin: 0 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #2a2a72;
+}
+.container .rightMain .content .instantHistory .topSection .right span {
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: 800;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .topSection
+  .right
+  .filter
+  label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .topSection
+  .right
+  .filter
+  select {
+  /* display: block; */
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #232528;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #eaf6ff;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .topSection
+  .right
+  .filter
+  select
+  option {
+  display: block;
+  height: 3px;
+  width: 100px;
+}
+.container .rightMain .content .instantHistory .contentBox {
+  height: calc(100% - 10vh);
+  width: 100%;
+  box-shadow: 0 0 2px gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .rightMain .content .instantHistory .contentBox .tableContent {
+  flex: 1;
+  /* border: 2px solid rebeccapurple; */
+  height: 100%;
+  margin-top: 5px;
+  /* overflow-y: scroll; */
+  /* margin-right: 5px; */
+}
+
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent:not(:nth-child(4)) {
+  margin-right: 5px;
+}
+.container .rightMain .content .instantHistory .contentBox .tableContent h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #eaf6ff;
+  background-color: #2a2a72;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent
+  .dataList {
+  width: 100%;
+  overflow-y: scroll;
+  height: calc(100% - 30px);
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent
+  .dataList::-webkit-scrollbar {
+  display: none;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent
+  .dataList
+  li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.63);
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent
+  .dataList
+  li:not(:nth-child(1)) {
+  margin: 2px 0;
+}
+.container
+  .rightMain
+  .content
+  .instantHistory
+  .contentBox
+  .tableContent
+  .dataList
+  #defaultList {
+  font-size: 0.8rem;
+  color: rgba(128, 128, 128, 0.63);
+}
+
+.container .rightMain .content .expenseForm {
+  height: 65vh;
+  width: 22vw;
+  background-color: #fff;
+  /* background-color: #311847; */
+  background-color: #2a2a72;
+  box-shadow: 0 0 5px #110b11;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  left: 400px;
+  /* top: -600px; */
+  opacity: 0;
+  top: -600px;
+  /* top: 0; */
+  transition: all 0.3s ease;
+}
+.toggleOpacity {
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: -600px;
+}
+.container .rightMain .content .expenseForm h2 {
+  font-size: 1.5rem;
+  color: #eaf6ff;
+}
+.container .rightMain .content .expenseForm label {
+  font-size: 1.2rem;
+  display: block;
+  color: #eaf6ff;
+  padding: 0 10px;
+}
+.container .rightMain .content .expenseForm input {
+  font-size: 1.2rem;
+  display: block;
+  color: #011638;
+  padding: 0 10px;
+  height: 40px;
+  width: 100%;
+  margin: 5px 0;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.container .rightMain .content .expenseForm button {
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  top: 30px;
+  font-weight: 600;
+  transform: scale(0.95);
+  box-shadow: 0 0 3px #bbc7ce89;
+  background-color: transparent;
+  color: #eaf6ff;
+  outline: none;
+  border: none;
+  transform: scale(0.95);
+}
+.container .rightMain .content .expenseForm button:hover {
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+#cancelBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px;
+  font-size: 2rem;
+  background-color: #232528;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .rightMain .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container .rightMain .content .expenseForm .icon {
+  height: 50px;
+  width: 50px;
+}
+.container .rightMain .content .expenseForm .icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* *********************LogExpense Page CSS (end)****************** */
+
+/* *********************Login Page CSS (Start)****************** */
+.loginContainer {
+  height: 100vh;
+  width: 100wh;
+  background-color: rgba(220, 220, 220, 0.253);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginContainer .image {
+  height: 100%;
+  width: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(images/loginBg.png);
+}
+.loginForm {
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+}
+.loginForm h1 {
+  color: #2a2a72;
+  font-weight: 700;
+}
+.loginForm h3 {
+  color: gray;
+}
+.form {
+  height: auto;
+  width: 60%;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #2a2a72;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.779);
+  color: #eaf6ff;
+}
+.form .input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.form .input input {
+  height: 40px;
+  width: 90%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a2a72;
+}
+.form .input input::placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: gainsboro;
+}
+.form .input span {
+  padding: 8px;
+  background-color: #eaf6ff;
+  color: #2a2a72;
+  margin-right: 5px;
+  font-weight: 400;
+}
+#visible {
+  position: absolute;
+  right: -45px;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  color: #eaf6ff;
+}
+.buttons {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#login {
+  padding: 8px 20px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: gainsboro;
+  color: #2a2a72;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: scale(0.9);
+  /* margin-top: 40px; */
+}
+#login:hover {
+  background-color: aliceblue;
+  color: #2a2a72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+.loginForm p {
+  /* margin-top: 20px;
+   */
+  font-size: 1rem;
+}
+.loginForm p a {
+  padding: 8px 20px;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #2a2a72;
+  color: gainsboro;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: scale(0.9);
+  text-decoration: none;
+  font-size: 1rem;
+  /* margin-top: 40px; */
+}
+.loginForm p a:hover {
+  color: gainsboro;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1);
+  background-color: gainsboro;
+  color: #2a2a72;
+}
+.loginContainer .icon {
+  height: 150px;
+  width: 150px;
+  margin: 0 30px;
+  position: absolute;
+}
+.loginContainer .icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.signupOpt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+.signupOpt a {
+  padding: 8px 20px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: gainsboro;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 600;
+  transform: scale(0.9);
+}
+.signupOpt a:hover {
+  background-color: #2a2a72;
+  color: gainsboro;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+.signupContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: #011638;
+}
+/* *********************Login Page CSS (End)****************** */

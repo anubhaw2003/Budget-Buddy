@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon Link -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="leftMain hideleftMain">
+            <div class="topSection">
+                <div class="logo">
+                    <div class="icon">
+                        <img src="images/logo.png" alt="">
+
+                    </div>
+                    <h3 id="quickIntro">"Befriend Your Budget with Buddy"</h3>
+                </div>
+                <div class="accountSection">
+                    <div class="myAccount">
+                        <div class="logo">
+                            <img src="images/accountDefaultLogo.webp" alt="">
+
+                        </div>
+                        <h2 id="name">User-Name123</h2>
+                        <span class="material-symbols-outlined" onclick="toggleFun('addAcc')">
+                            expand_more
+                        </span>
+
+                    </div>
+                    <div class="addAcc">
+                        <span>Add Account</span>
+                        <span class="material-symbols-outlined addIcon">
+                            person_add
+                        </span>
+                    </div>
+
+
+                    <div class="connections">
+                        <div class="logo">
+                            <img src="images/connection.webp" alt="">
+
+                        </div>
+                        <h2 id="connect">Connections</h2>
+                        <span class="material-symbols-outlined" onclick="toggleFun('createcontact')">
+                            expand_more
+                        </span>
+
+
+                    </div>
+
+                    <div class="createcontact">
+                        <div class="contact innerDiv">
+                            <span>Create Contact</span>
+                            <span class="material-symbols-outlined addIcon">
+                                person_add
+                            </span>
+
+                        </div>
+                        <div class="group innerDiv">
+                            <span>Create Group</span>
+                            <span class="material-symbols-outlined addIcon">
+                                person_add
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="navList">
+                <ul>
+                    <li><a href="">Home <span class="material-symbols-outlined">
+                                home
+                            </span></a></li>
+
+                    <li><a href="">Manage Account <span class="material-symbols-outlined">
+                                manage_accounts
+                            </span></a></li>
+                    <li><a href="">Settings <span class="material-symbols-outlined">
+                                settings
+                            </span></a></li>
+                    <li><a href="">My Activity <span class="material-symbols-outlined">
+                                local_activity
+                            </span></a></li>
+                    <li><a href="">About US <span class="material-symbols-outlined">
+                                info
+                            </span></a></li>
+                    <li><a href="">Contact US <span class="material-symbols-outlined">
+                                contacts_product
+                            </span></a></li>
+                    <li><a href="">Help <span class="material-symbols-outlined">
+                                help
+                            </span></a></li>
+                    <li><a href="">FAQs <span class="material-symbols-outlined">
+                                contacts_product
+                            </span></a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="rightMain">
+            <div class="topSection">
+                <!-- 
+                <div class="logo">
+                    <div class="icon">
+
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <h3 id="quickIntro">"Befriend Your Budget with Buddy"</h3>
+                </div> -->
+                <span class="material-symbols-outlined" id="toggleBtn" onclick="toggleFun('leftMain')">
+                    density_medium
+                </span>
+
+                <div class="navbar">
+                    <ul>
+                        <li id="addBudget">Add Budget</li>
+                        <li id="addExpense">Add Expense</li>
+                        <li>Dashbaord</li>
+                        <li>Connections</li>
+                        <li>Payments</li>
+                        <li>History</li>
+                        <li>Report</li>
+                    </ul>
+
+                </div>
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+
+            </div>
+
+
+            <div class="content">
+                <div class="summary">
+                    <h2>Quick Summmary <span>January 2024</span></h2>
+                    <div class="icons">
+                        <div class="iconCard" id="budgetData">
+                            <div class="img">
+                                <img src="images/iconcardLogo.png" alt="">
+
+                            </div>
+                            <h3>Budget:<span>0$</span></h3>
+                        </div>
+                        <div class="iconCard" id="expData">
+                            <div class="img">
+                                <img src="images/iconcardLogo.png" alt="">
+
+                            </div>
+                            <h3>Expenditure:<span>0$</span></h3>
+                        </div>
+                        <div class="iconCard" id="leftAmntData">
+                            <div class="img">
+                                <img src="images/iconcardLogo.png" alt="">
+
+                            </div>
+                            <h3>Left Amount:<span>0$</span></h3>
+                        </div>
+                        <div class="iconCard" id="savingData">
+                            <div class="img">
+                                <img src="images/iconcardLogo.png" alt="">
+
+                            </div>
+                            <h3>Savings:<span>0$</span></h3>
+                        </div>
+                        <div class="iconCard" id="ratioData">
+                            <div class="img">
+                                <img src="images/iconcardLogo.png" alt="">
+
+                            </div>
+                            <h3>Quick Ratio:<span>1</span></h3>
+                        </div>
+
+                        <!-- <p></p> -->
+                    </div>
+
+                </div>
+                <div class="instantHistory">
+                    <div class="topSection">
+                        <!-- 1.searchbbox
+                        2.dropbox filter
+                        3.dropbox F-year
+                        4.create budget
+                        5.add expenditure form -->
+                        <div class="searchBox">
+                            <label for="search"><span class="material-symbols-outlined">
+                                    search
+                                </span></label>
+                            <input type="search" name="search" id="search">
+                        </div>
+                        <div class="right">
+                            <div class="filter">
+                                <label for="filter">Filter:</label>
+                                <select name="" id="filter">
+                                    <option value="opt1">Date</option>
+                                    <option value="opt1">Month</option>
+                                    <option value="opt1">Amount+</option>
+                                    <option value="opt1">Amount-</option>
+                                </select>
+                            </div>
+                            <span>F-Year 2023-24</span>
+                        </div>
+
+                    </div>
+                    <div class="contentBox">
+                        <div class="date tableContent">
+                            <h2>Date</h2>
+                            <ul class="dataList">
+                                <li id="defaultList">No Data Item To Show</li>
+                                <!-- <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li>
+                                <li>abcd</li> -->
+
+                            </ul>
+                        </div>
+                        <div class="time tableContent">
+                            <h2>Time</h2>
+                            <ul class="dataList">
+                                <li id="defaultList">No Data Item To Show</li>
+
+                            </ul>
+                        </div>
+                        <div class="amount tableContent">
+                            <h2>Amount</h2>
+                            <ul class="dataList">
+                                <li id="defaultList">No Data Item To Show</li>
+
+                            </ul>
+                        </div>
+                        <div class="status tableContent">
+                            <h2>Status</h2>
+                            <ul class="dataList">
+                                <li id="defaultList">No Data Item To Show</li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- Absolute Divs -->
+                <div class="expenseForm">
+                    <div class="top">
+                        <div class="icon">
+                            <img src="images/exp.png" alt="">
+
+                        </div>
+                        <h2>Create today's Expense</h2>
+                    </div>
+                    <label for="expInp">Item:</label>
+                    <input type="text" name="" id="expInp">
+                    <label for="amntInp">Amount:</label>
+                    <input type="number" name="" id="amntInp">
+                    <label for="priceInp">Price:</label>
+                    <input type="number" name="" id="priceInp">
+                    <label for="statusInp">Payment Status:</label>
+                    <input type="text" name="" id="statusInp">
+                    <button id="addExpenseBtn">Add Item</button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
